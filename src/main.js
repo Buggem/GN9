@@ -11,7 +11,7 @@ window.gn9_game = p => {
   };
   let setupGameLang = function() {
     let yourLang = getNavLang();
-    if(window.gn9_supportedLang.contains(yourLang)) {
+    if(window.gn9_supportedLang.includes(yourLang)) {
       assets = `${assets}${yourLang}`;
     } else {
       assets = `${assets}en`;
