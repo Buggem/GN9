@@ -63,7 +63,7 @@ window.gn9_game = p => {
     setupGameLang();
     lines.menu = p.loadStrings(`${assets}\/menu.txt`).join('\n');
     images.cursor = p.loadImage(`${assets}\/cursor_pixel.png`);
-    images.logo = p.loadImage(`${assets}\/logo_gn9.png`);
+    images.logo = p.loadImage(`${assets}\/logo-gn9.png`);
   };
   
   
