@@ -14,11 +14,23 @@ window.gn9_game = p => {
     if(window.gn9_supportedLang.contains(yourLang)) {
       assets = `${assets}${yourLang}`;
     } else {
-      assets = `${assets}en`
+      assets = `${assets}en`;
     }
   };
+  
+  let lines = {};
+  
+  
+  
+  
+  p.preload = function() {
+    setupGameLang();
+    lines.menu = loadStrings(`${assets}\/menu.txt`).join('\n');
+  };
+  
+  
   p.setup = function() {
-    p.createCanvas(700, 410);
+    p.createCanvas(p.windowWidth, p.windowHeight);
   };
 
   p.draw = function() {
