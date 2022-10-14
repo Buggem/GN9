@@ -3,7 +3,15 @@
 Play the game once it's finished. We're not spoiling anything :)
 
 
+<details> 
+	<summary>"Just tell me now!"</summary>
+	<br>
+	<ul>
+	  NO WAY! This is all secret! I can't even tell you a single thing. I can't even say if it's a platformer or not.
+    <br>
+    Just wait for me to finish, ok?
+	</ul>
+</details>
 
-
-
-This project is licensed under the Buggem license 1.0.
+----------------------------------------------------------
+<sub>This project is licensed under the [Buggem License 1.0](https://buggem.github.io/GN9/LICENSE.txt), a modified version of the MIT License.</sub>
