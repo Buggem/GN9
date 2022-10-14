@@ -63,6 +63,7 @@ window.gn9_game = p => {
     setupGameLang();
     lines.menu = p.loadStrings(`${assets}\/menu.txt`).join('\n');
     images.cursor = p.loadImage(`${assets}\/cursor_pixel.png`);
+    images.logo = p.loadImage(`${assets}\/logo_gn9.svg`);
   };
   
   
@@ -77,7 +78,11 @@ window.gn9_game = p => {
     canzyWinResizable();
     p.background(255);
     p.fill(255, 0, 0);
+    p.imageMode(CORNER);
     p.image(images.cursor, p.mouseX, p.mouseY, 50, 50);
+    p.imageMode(CENTER);
+    p.image(images.cursor, width/2, height/5);
+    
   };
 };
 
