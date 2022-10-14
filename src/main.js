@@ -77,8 +77,8 @@ window.gn9_game = p => {
 
   p.draw = function() {
     canzyWinResizable();
-    p.background(0);
-    p.fill(255);
+    p.background(255);
+    p.fill(255, 0, 0);
     p.rect(p.mouseX, p.mouseY, 50, 50);
   };
 };
