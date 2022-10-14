@@ -25,13 +25,14 @@ window.gn9_game = p => {
   
   p.preload = function() {
     setupGameLang();
-    lines.menu = loadStrings(`${assets}\/menu.txt`).join('\n');
+    lines.menu = p.loadStrings(`${assets}\/menu.txt`).join('\n');
   };
   
   
   p.setup = function() {
-    p.createCanvas(p.windowWidth, p.windowHeight);
-    p._renderer.elt.setAttribute("style", "image-rendering: pixelated; border-spacing: 0; border-collapse: collapse; " + p._renderer.elt.getAttribute("style"));
+    var canzy = p.createCanvas(p.windowWidth, p.windowHeight);
+    var cbr = canzy.elt.getBoundingClientRect();
+    canzy.position(0-cbr.x, 0-cbr.y);
   };
 
   p.draw = function() {
