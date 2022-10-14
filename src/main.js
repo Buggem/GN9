@@ -37,7 +37,7 @@ window.gn9_supportedLang = [ 'en' ];
 window.gn9_game = p => {
   let cbr;
   let canzy;
-  let assets = 'src\/assets\/lang\/';
+  let assets = '\/src\/assets\/lang\/';
   let getNavLang = function() {
     return (navigator.language || navigator.browserLanguage).split('-')[0];
   };
