@@ -31,6 +31,7 @@ window.gn9_game = p => {
   
   p.setup = function() {
     p.createCanvas(p.windowWidth, p.windowHeight);
+    p._renderer.elt.setAttribute("style", "image-rendering: pixelated; border-spacing: 0; border-collapse: collapse; " + p._renderer.elt.getAttribute("style"));
   };
 
   p.draw = function() {
