@@ -1,3 +1,22 @@
+// hide cursor
+
+document.documentElement.style.cursor = 'none';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 window.gn9_supportedLang = [ 'en' ];
 
 
