@@ -3,7 +3,11 @@
 document.documentElement.style.cursor = 'none';
 
 
+// make sure cursor is hidden at all times
 
+
+document.documentElement.style.width  = '100%';
+document.documentElement.style.height = '100%';
 
 
 
