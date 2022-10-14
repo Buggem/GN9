@@ -35,6 +35,7 @@ window.gn9_supportedLang = [ 'en' ];
 
 
 window.gn9_game = p => {
+  let cbr;
   let canzy;
   let assets = 'src\/assets\/lang\/';
   let getNavLang = function() {
@@ -50,8 +51,10 @@ window.gn9_game = p => {
   };
   let canzyWinResizable = function() {
     let brwin = window.getWindowBoundingRect();
-    canzy.elt.setAttribute('width' , (brwin.width ).toString());
-    canzy.elt.setAttribute('height', (brwin.height).toString());
+    canzy.elt.setAttribute('width' , (brwin.width + cbr.x).toString());
+    canzy.elt.setAttribute('height', (brwin.height+ cbr.y).toString());
+    canzy.elt.style.width  = ((brwin.width + cbr.x).toString()) + 'px';
+    canzy.elt.style.height = ((brwin.height+ cbr.y).toString()) + 'px';
   };
   
   let lines = {};
@@ -67,7 +70,7 @@ window.gn9_game = p => {
   
   p.setup = function() {
     canzy = p.createCanvas(p.windowWidth, p.windowHeight);
-    var cbr = canzy.elt.getBoundingClientRect();
+    cbr = canzy.elt.getBoundingClientRect();
     canzy.position(0-cbr.x, 0-cbr.y);
     canzyWinResizable();
   };
