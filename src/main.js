@@ -55,13 +55,14 @@ window.gn9_game = p => {
   };
   
   let lines = {};
-  
+  let images = {};
   
   
   
   p.preload = function() {
     setupGameLang();
     lines.menu = p.loadStrings(`${assets}\/menu.txt`).join('\n');
+    images.cursor = p.loadImage(`${assets}\/cursor_pixel.png`);
   };
   
   
@@ -76,7 +77,7 @@ window.gn9_game = p => {
     canzyWinResizable();
     p.background(255);
     p.fill(255, 0, 0);
-    p.rect(p.mouseX, p.mouseY, 50, 50);
+    p.image(images.cursor, p.mouseX, p.mouseY, 50, 50);
   };
 };
 
