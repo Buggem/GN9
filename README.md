@@ -1,2 +1,3 @@
 # GN9
-A video game I'm working on. I couldn
+
+Play the game once it's finished. We're not spoiling anything :)
