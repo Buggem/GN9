@@ -51,10 +51,7 @@ window.gn9_game = p => {
   };
   let canzyWinResizable = function() {
     let brwin = window.getWindowBoundingRect();
-    canzy.elt.setAttribute('width' , (brwin.width + cbr.x).toString());
-    canzy.elt.setAttribute('height', (brwin.height+ cbr.y).toString());
-    canzy.elt.style.width  = ((brwin.width + cbr.x).toString()) + 'px';
-    canzy.elt.style.height = ((brwin.height+ cbr.y).toString()) + 'px';
+    p.resizeCanvas((brwin.width + cbr.x), (brwin.height+ cbr.y));
   };
   
   let lines = {};
