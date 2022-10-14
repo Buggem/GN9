@@ -6,10 +6,6 @@ document.documentElement.style.cursor = 'none';
 // make sure cursor is hidden at all times
 
 
-document.documentElement.style.width  = '100%';
-document.documentElement.style.height = '100%';
-
-
 
 
 
@@ -52,8 +48,9 @@ window.gn9_game = p => {
     }
   };
   let canzyWinResizable = function() {
-    canzy.elt.style.width  = "100%";
-    canzy.elt.style.height = "100%";
+    let brwin = window.getWindowBoundingRect();
+    canzy.elt.setAttribute('width' , (brwin.width ).toString());
+    canzy.elt.setAttribute('height', (brwin.height).toString());
   };
   
   let lines = {};
@@ -75,6 +72,7 @@ window.gn9_game = p => {
   };
 
   p.draw = function() {
+    canzyWinResizable();
     p.background(0);
     p.fill(255);
     p.rect(p.mouseX, p.mouseY, 50, 50);
