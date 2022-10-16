@@ -81,7 +81,7 @@ window.gn9_game = p => {
     p.imageMode(p.CORNER);
     p.image(images.cursor, p.mouseX, p.mouseY, 50, 50);
     p.imageMode(p.CENTER);
-    p.image(images.logo, width/2, height/5, images.logo.width*5.23521, images.logo.height*5.23521);
+    p.image(images.logo, p.width/2, p.height/5, images.logo.width*5.23521, images.logo.height*5.23521);
     
   };
 };
