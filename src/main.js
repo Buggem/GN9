@@ -78,9 +78,9 @@ window.gn9_game = p => {
     canzyWinResizable();
     p.background(255);
     p.fill(255, 0, 0);
-    p.imageMode(CORNER);
+    p.imageMode(p.CORNER);
     p.image(images.cursor, p.mouseX, p.mouseY, 50, 50);
-    p.imageMode(CENTER);
+    p.imageMode(p.CENTER);
     p.image(images.logo, width/2, height/5, images.logo.width*5.23521, images.logo.height*5.23521);
     
   };
