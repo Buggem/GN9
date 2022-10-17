@@ -58,7 +58,7 @@ window.gn9_game = p => {
       for(let y = 0; y < image.height; y++) {
         p.rectMode(CORNER);
         p.noStroke();
-        p.fill(..image.get(x, y));
+        p.fill(...image.get(x, y));
         p.rect(x*(width/image.width), y*(height/image.height), (width/image.width), (height/image.height));
       }
     }
