@@ -53,7 +53,16 @@ window.gn9_game = p => {
     let brwin = window.getWindowBoundingRect();
     p.resizeCanvas((brwin.width + cbr.x), (brwin.height+ cbr.y));
   };
-  
+  let image2 = function(image, x, y, width, height) {
+    for(let x = 0; x < image.width; x++) {
+      for(let y = 0; y < image.height; y++) {
+        p.rectMode(CORNER);
+        p.noStroke();
+        p.fill(..image.get(x, y));
+        p.rect(x*(width/image.width), y*(height/image.height), (width/image.width), (height/image.height));
+      }
+    }
+  };
   let lines = {};
   let images = {};
   
@@ -81,7 +90,7 @@ window.gn9_game = p => {
     p.imageMode(p.CORNER);
     p.image(images.cursor, p.mouseX, p.mouseY, 50, 50);
     p.imageMode(p.CENTER);
-    p.image(images.logo, p.width/2, p.height/5, images.logo.width*5.23521, images.logo.height*5.23521);
+    p.image2(images.logo, (p.width/2)-images.logo.width/2, (p.height/5)-images.logo.height/2, images.logo.width*5.23521, images.logo.height*5.23521);
     
   };
 };
