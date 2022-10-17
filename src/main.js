@@ -90,7 +90,7 @@ window.gn9_game = p => {
     p.imageMode(p.CORNER);
     p.image(images.cursor, p.mouseX, p.mouseY, 50, 50);
     p.imageMode(p.CENTER);
-    image2(images.logo, (p.width/2)-images.logo.width/2, (p.height/5)-images.logo.height/2, images.logo.width*6, images.logo.height*6);
+    image2(images.logo, (p.width/2)-(images.logo.width/2), (p.height/5)-(images.logo.height/2), images.logo.width*6, images.logo.height*6);
     
   };
 };
