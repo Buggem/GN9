@@ -81,7 +81,7 @@ window.gn9_game = p => {
     cbr = canzy.elt.getBoundingClientRect();
     canzy.position(0-cbr.x, 0-cbr.y);
     canzyWinResizable();
-    p.pixelDensity(1);
+    //p.pixelDensity(1);
   };
 
   p.draw = function() {
@@ -91,9 +91,9 @@ window.gn9_game = p => {
     p.imageMode(p.CORNER);
     p.image(images.cursor, p.mouseX, p.mouseY, 50, 50);
     p.imageMode(p.CENTER);
-    p.pixelDensity(6);
-    p.image(images.logo, (p.width/2), (p.height/5), images.logo.width*6, images.logo.height*6);
-    p.pixelDensity(1);
+    //p.pixelDensity(6);
+    p.image(images.logo.resize(images.logo.width*6, images.logo.height*6), (p.width/2), (p.height/5));
+    //p.pixelDensity(1);
   };
 };
 
