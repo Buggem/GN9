@@ -72,7 +72,13 @@ window.gn9_game = p => {
     setupGameLang();
     lines.menu = p.loadStrings(`${assets}\/menu.txt`).join('\n');
     images.cursor = p.loadImage(`${assets}\/cursor_pixel.png`);
-    images.logo = p.loadImage(`${assets}\/logo-gn9.png`).resize(images.logo.width*6, images.logo.height*6);
+    images.logo = {
+      img: p.loadImage(`${assets}\/logo-gn9.png`, function() {
+        images.logo.img = images.logo.img.resize(images.logo.width*6, images.logo.height*6);
+        images.logo.ready = true;
+      }),
+      ready: false
+    };
   };
   
   
