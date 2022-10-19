@@ -90,7 +90,6 @@ window.gn9_game = p => {
       img: new p5.Element(sp_img(`${assets}\/logo-gn9.png`)),
       ready: true
     };
-    images.logo.img.gtf();
   };
   
   
@@ -99,6 +98,7 @@ window.gn9_game = p => {
     cbr = canzy.elt.getBoundingClientRect();
     canzy.position(0-cbr.x, 0-cbr.y);
     canzyWinResizable();
+    images.logo.img.gtf();
     //p.pixelDensity(1);
   };
 
