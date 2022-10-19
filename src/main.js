@@ -65,14 +65,9 @@ window.gn9_game = p => {
   };
   let sp_img = function(theUri) {
     let img = new Image();
-    img.onload = () => {
-      var p5Img = new p5.Element(img);
-      p5Img.width = img.width;
-      p5Img.height = img.height;
-      return p5Img;
-    };
     img.style.imageRendering = 'pixelated';
     img.src = theUri;
+    return img;
   };
   window.lines = {};
   window.images = {};
