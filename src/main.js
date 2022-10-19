@@ -84,7 +84,7 @@ window.gn9_game = p => {
       ready: false
     };
     images.logo = {
-      img: sp_img(`${assets}\/logo-gn9.png`),
+      img: new p5.Element(sp_img(`${assets}\/logo-gn9.png`)),
       ready: true
     };
   };
