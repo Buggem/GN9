@@ -71,7 +71,7 @@ window.gn9_game = p => {
       p5Img.height = img.height;
       return p5Img;
     };
-    img.elt.style.imageRendering = 'pixelated';
+    img.style.imageRendering = 'pixelated';
     img.src = theUri;
   };
   window.lines = {};
