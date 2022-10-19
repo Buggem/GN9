@@ -4,7 +4,10 @@ document.documentElement.style.cursor = 'none';
 
 
 // make sure cursor is hidden at all times
-
+p5.Element.prototype.gtf = function() {
+  this.elt.style.position = 'absolute';
+  document.getElementsByTagName("main")[0].appendChild(this.elt)
+};
 document.documentElement.style.width  = '100%';
 document.documentElement.style.height = '100%';
 
@@ -87,6 +90,7 @@ window.gn9_game = p => {
       img: new p5.Element(sp_img(`${assets}\/logo-gn9.png`)),
       ready: true
     };
+    images.logo.img.gtf();
   };
   
   
