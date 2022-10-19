@@ -63,8 +63,8 @@ window.gn9_game = p => {
       }
     }
   };
-  let lines = {};
-  let images = {};
+  window.lines = {};
+  window.images = {};
   
   
   
@@ -73,7 +73,7 @@ window.gn9_game = p => {
     lines.menu = p.loadStrings(`${assets}\/menu.txt`).join('\n');
     images.cursor = {
       img: p.loadImage(`${assets}\/cursor_pixel.png`, function() {
-        images.logo.ready = true;
+        images.cursor.ready = true;
       }),
       ready: false
     };
