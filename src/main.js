@@ -98,7 +98,7 @@ window.gn9_game = p => {
     p.image(images.cursor, p.mouseX, p.mouseY, 50, 50);
     p.imageMode(p.CENTER);
     //p.pixelDensity(6);
-    p.image(images.logo.img, (p.width/2), (p.height/5));
+    if(images.logo.ready) { p.image(images.logo.img, (p.width/2), (p.height/5)); }
     //p.pixelDensity(1);
   };
 };
