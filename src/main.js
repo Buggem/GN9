@@ -71,10 +71,15 @@ window.gn9_game = p => {
   p.preload = function() {
     setupGameLang();
     lines.menu = p.loadStrings(`${assets}\/menu.txt`).join('\n');
-    images.cursor = p.loadImage(`${assets}\/cursor_pixel.png`);
+    images.cursor = {
+      img: p.loadImage(`${assets}\/cursor_pixel.png`, function() {
+        images.logo.ready = true;
+      }),
+      ready: false
+    };
     images.logo = {
       img: p.loadImage(`${assets}\/logo-gn9.png`, function() {
-        images.logo.img = images.logo.img.resize(images.logo.width*6, images.logo.height*6);
+        images.logo.img.resize(images.logo.width*6, images.logo.height*6);
         images.logo.ready = true;
       }),
       ready: false
@@ -95,7 +100,7 @@ window.gn9_game = p => {
     p.background(255);
     p.fill(255, 0, 0);
     p.imageMode(p.CORNER);
-    p.image(images.cursor, p.mouseX, p.mouseY, 50, 50);
+    if(images.cursor.ready) { p.image(images.cursor, p.mouseX, p.mouseY, 50, 50); }
     p.imageMode(p.CENTER);
     //p.pixelDensity(6);
     if(images.logo.ready) { p.image(images.logo.img, (p.width/2), (p.height/5)); }
