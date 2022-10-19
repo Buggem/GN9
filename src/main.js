@@ -63,6 +63,17 @@ window.gn9_game = p => {
       }
     }
   };
+  let sp_img = function(theUri) {
+    let img = new Image();
+    img.onload = () => {
+      var p5Img = new p5.Element(img);
+      p5Img.width = img.width;
+      p5Img.height = img.height;
+      return p5Img;
+    };
+    img.elt.style.imageRendering = 'pixelated';
+    img.src = theUri;
+  };
   window.lines = {};
   window.images = {};
   
@@ -78,11 +89,8 @@ window.gn9_game = p => {
       ready: false
     };
     images.logo = {
-      img: p.loadImage(`${assets}\/logo-gn9.png`, function() {
-        images.logo.img.resize(images.logo.width*6, images.logo.height*6);
-        images.logo.ready = true;
-      }),
-      ready: false
+      img: sp_img(`${assets}\/logo-gn9.png`),
+      ready: true
     };
   };
   
