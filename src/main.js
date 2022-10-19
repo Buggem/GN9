@@ -100,7 +100,7 @@ window.gn9_game = p => {
     p.background(255);
     p.fill(255, 0, 0);
     p.imageMode(p.CORNER);
-    if(images.cursor.ready) { p.image(images.cursor, p.mouseX, p.mouseY, 50, 50); }
+    if(images.cursor.ready) { p.image(images.cursor.img, p.mouseX, p.mouseY, 50, 50); }
     p.imageMode(p.CENTER);
     //p.pixelDensity(6);
     if(images.logo.ready) { p.image(images.logo.img, (p.width/2), (p.height/5)); }
