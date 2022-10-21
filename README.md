@@ -8,9 +8,17 @@ Play the game once it's finished. We're not spoiling anything :)
 	<br>
 	<ul>
 	  NO WAY! This is all secret! I can't even tell you a single thing. I can't even say if it's a platformer or not.
-    <br>
-    Just wait for me to finish, ok?
+	  <br>
+	  Just wait for me to finish, ok?
+
 	</ul>
+</details>
+<details> 
+        <summary>"I really wanna know!!"</summary>
+        <br>
+        <ul>
+          Check out SECRET.md. But don't tell anyone about it. It's <b>SECRET</b>.
+        </ul>
 </details>
 
 ----------------------------------------------------------
