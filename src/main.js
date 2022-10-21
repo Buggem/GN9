@@ -99,6 +99,8 @@ window.gn9_game = p => {
     canzy.position(0-cbr.x, 0-cbr.y);
     canzyWinResizable();
     images.logo.img.gtf();
+    images.logo.img.elt.width = 600;
+    images.logo.img.elt.height = 300;
     //p.pixelDensity(1);
   };
 
