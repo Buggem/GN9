@@ -40,7 +40,7 @@ window.gn9_supportedLang = [ 'en' ];
 window.gn9_game = p => {
   let cbr;
   let canzy;
-  let assets = 'src\/assets\/lang\/';
+  let assets = 'src/assets/lang/';
   let getNavLang = function() {
     return (navigator.language || navigator.browserLanguage).split('-')[0];
   };
@@ -79,15 +79,19 @@ window.gn9_game = p => {
   
   p.preload = function() {
     setupGameLang();
-    lines.menu = p.loadStrings(`${assets}\/menu.txt`).join('\n');
+    lines.ready = {};
+    lines.menu = p.loadStrings(`${assets}/menu.txt`, function() {
+      lines.menu = lines.menu.join('\n');
+      lines.ready.menu = true;
+    });
     images.cursor = {
-      img: p.loadImage(`${assets}\/cursor_pixel.png`, function() {
+      img: p.loadImage(`${assets}/cursor_pixel.png`, function() {
         images.cursor.ready = true;
       }),
       ready: false
     };
     images.logo = {
-      img: new p5.Element(sp_img(`${assets}\/logo-gn9.png`)),
+      img: new p5.Element(sp_img(`${assets}/logo-gn9.png`)),
       ready: true
     };
   };
